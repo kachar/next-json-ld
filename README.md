@@ -1,7 +1,9 @@
 Repo created to reproduce https://github.com/vercel/next.js/issues/22729
 
 App live: https://next-json-ld.vercel.app/
+
 Github repo: https://github.com/kachar/next-json-ld
+
 Results: https://search.google.com/test/rich-results?id=y4alPvCsTMqLU5sj1yG3_g
 
 ---
