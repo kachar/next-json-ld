@@ -23,7 +23,6 @@ const JsonLd = ({ data, language }) => {
 const MetaHead = ({ children }) => (
   <Head>
     <title>Create Next App</title>
-    {children}
     <JsonLd data={jsonLd} />
   </Head>
 );
