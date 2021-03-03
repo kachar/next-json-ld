@@ -15,19 +15,16 @@ const MetaHead = ({ children }) => <Head>{children}</Head>;
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Head>
+      <MetaHead>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
-
-        <MetaHead>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(jsonLd, null, 2),
-            }}
-          />
-        </MetaHead>
-      </Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd, null, 2),
+          }}
+        />
+      </MetaHead>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
