@@ -10,27 +10,20 @@ const jsonLd = {
   sameAs: ["http://www.twitter.com/vercel"],
 };
 
-const JsonLd = () => {
-  const html = JSON.stringify(jsonLd, null, 2);
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: html }}
-    />
-  );
-};
-
-export default function Home() {
+export default function Second() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>First page</title>
+        <title>Second page</title>
         <link rel="icon" href="/favicon.ico" />
-        <JsonLd />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>First page</h1>
+        <h1 className={styles.title}>Second page</h1>
 
         <p className={styles.description}>
           Get started by editing{" "}
