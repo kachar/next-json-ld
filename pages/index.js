@@ -1,12 +1,25 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Vercel",
+  url: "https://vercel.com/",
+  logo: "https://assets.vercel.com/image/upload/q_auto/front/vercel/dps.png",
+  sameAs: ["http://www.twitter.com/vercel"],
+};
+
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, 2) }}
+        />
       </Head>
 
       <main className={styles.main}>
