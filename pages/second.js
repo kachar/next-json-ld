@@ -18,7 +18,7 @@ export default function Second() {
         <link rel="icon" href="/favicon.ico" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: html }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, 2) }}
         />
       </Head>
 
