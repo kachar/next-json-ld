@@ -10,16 +10,23 @@ const jsonLd = {
   sameAs: ["http://www.twitter.com/vercel"],
 };
 
+const MetaHead = ({ children }) => <Head>{children}</Head>;
+
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, 2) }}
-        />
+
+        <MetaHead>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(jsonLd, null, 2),
+            }}
+          />
+        </MetaHead>
       </Head>
 
       <main className={styles.main}>
